@@ -1,0 +1,90 @@
+﻿<Page
+    
+    x:Class="Earth_App_JC.LogIn"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Earth_App_JC"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel 
+            Padding="10"
+            HorizontalAlignment="Center" >
+
+            <TextBlock FontSize="14">
+                <TextBlock.Text>
+                    To continue to your dashboard please log-in in using your:              
+                </TextBlock.Text>
+            </TextBlock>
+
+            <TextBlock Text="User Credentials" Margin="0,50,0,30"/>
+
+            <TextBox x:Name="txtUsername" 
+                     PlaceholderText="Enter username or email here"
+                     Padding="0.5" 
+                     Header="Username"/>
+            
+            <PasswordBox x:Name="txtPassword" 
+                         PlaceholderText="Enter password here"
+                         Padding="0.5"
+                         Header="Password"
+                         Margin="0,10,0,5"/>
+
+            <CheckBox x:Name="cbxLogdIn"
+                      Content="Keep me logged in" 
+                      IsChecked="True"
+                      Click="cbxLogdIn_Click" />
+
+            <Button x:Name="btnLogIn"
+                    Content="Log In" 
+                    Click="btnLogIn_Click"
+                    BorderBrush="DarkGreen" 
+                    BorderThickness="0.5" 
+                    Background="PaleGreen" Opacity="0.5"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,0,10"/>
+
+            <HyperlinkButton x:Name="lnkForgotCredentials"
+                             Content="Forgot Username or Password?" 
+                             Foreground="ForestGreen"
+                             Click="lnkForgotCredentials_Click" />
+
+            <Popup>
+                <TextBlock x:Name="lblError"
+                           Text="" />
+            </Popup>
+
+            <TextBlock Text="or" />
+
+            <TextBlock Text="Active Account" Margin="0,30,0,30" />
+
+            <Button
+                x:Name="btnFacebook"
+                Click="btnFacebook_Click"
+                HorizontalAlignment="Center"
+                Background="White"
+                Padding="0"
+                Margin="0,0,0,20">
+                <Image Source="Assets\facebook.png" 
+                       Width="200"
+                       HorizontalAlignment="Left"/>
+            </Button>
+
+            <Button
+                x:Name="btnGoogle"
+                Click="btnGoogle_Click"
+                HorizontalAlignment="Center"
+                Background="White"
+                Padding="0">
+                <Image Source="Assets\google.png" 
+                       Width="200"
+                       HorizontalAlignment="Left"/>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Page>

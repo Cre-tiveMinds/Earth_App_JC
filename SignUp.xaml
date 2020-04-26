@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="Earth_App_JC.SignUp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Earth_App_JC"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <StackPanel 
+            Padding="10"
+            HorizontalAlignment="Center" >
+
+            <TextBlock FontSize="20"
+                       Margin="0,50,0,0">
+                <TextBlock.Text>
+                    Join our community and
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock FontSize="20"
+                       Margin="0,0,0,0">
+                <TextBlock.Text>
+                    become a waste warrior:
+                </TextBlock.Text>
+            </TextBlock>
+
+            <Button x:Name="btnCreateAcc"
+                    Content="Create Account"
+                    FontWeight="Bold"
+                    Click="btnCreateAcc_Click"
+                    BorderBrush="DarkGreen" 
+                    BorderThickness="0.5" 
+                    Background="PaleGreen" Opacity="0.5"
+                    HorizontalAlignment="Center"
+                    Margin="0,50,0,30" />
+
+            <TextBlock Text="or" Margin="0,30,0,60"
+                       HorizontalAlignment="Center"/>
+
+            <Button
+                x:Name="btnFacebook"
+                Click="btnFacebook_Click"
+                HorizontalAlignment="Center"
+                Background="White"
+                Padding="0"
+                Margin="0,0,0,20">
+                <Image Source="Assets\facebook.png" 
+                       Width="200"
+                       HorizontalAlignment="Left"/>
+            </Button>
+
+            <Button
+                x:Name="btnGoogle"
+                Click="btnGoogle_Click"
+                HorizontalAlignment="Center"
+                Background="White"
+                Padding="0">
+                <Image Source="Assets\google.png" 
+                       Width="200"
+                       HorizontalAlignment="Left"/>
+            </Button>
+
+        </StackPanel>
+
+    </Grid>
+</Page>
